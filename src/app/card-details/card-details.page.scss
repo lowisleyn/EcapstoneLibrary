@@ -1,0 +1,27 @@
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cdetail{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 30px;
+  }
+  
+  .button-container {
+    display: flex; /* Use flexbox to position the buttons */
+    justify-content: center;
+    align-items: center; /* Center the buttons vertically */
+  }
+
+  ion-button#add-button {
+    width: 60%; /* Set the width of the add-button to 60% */
+    height: 50px;
+  }
+  
+  ion-button#read-button {
+    width: 30%; /* Set the width of the read-button to 35% */
+    height: 50px;
+  }

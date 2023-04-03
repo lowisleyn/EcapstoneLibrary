@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item-divider style="display: flex; align-items: center;" lines="none">
+    <ion-label style="margin-right: auto;">Theme</ion-label>
+    <div class="toggleWrapper">
+      <input type="checkbox" class="dn" id="dn" (click)="toggleDarkMode()">
+      <label for="dn" class="toggle">
+        <span class="toggle__handler">
+          <span class="crater crater--1"></span>
+          <span class="crater crater--2"></span>
+          <span class="crater crater--3"></span>
+        </span>
+        <span class="star star--1"></span>
+        <span class="star star--2"></span>
+        <span class="star star--3"></span>
+        <span class="star star--4"></span>
+        <span class="star star--5"></span>
+        <span class="star star--6"></span>
+      </label>
+    </div>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-label (click)="ab()">About</ion-label>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-label (click)="um()">Guide</ion-label>
+  </ion-item-divider>
+  <ion-item-divider>
+    <ion-label (click)="fqs()">Frequently Asked Questions (FAQs) </ion-label>
+  </ion-item-divider>
+
+</ion-content>

@@ -24,3 +24,291 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+@media (prefers-color-scheme){
+    :root{
+
+      * {
+        font-family: 'Poppins', sans-serif;
+      }
+     
+    ion-content {
+        --background: #f9f4ef;
+      }
+
+    ion-tab-bar {
+      --background: #f9f4ef;
+      --color-selected: #5D1B2E;
+      --color: #B99798;
+      --border: none;
+    }
+    ion-toolbar {
+      --background: #f9f4ef;
+    }
+    ion-searchbar {
+      --background: #5D1B2E;
+      --color: #ffffff;
+      --border-radius: 30px;
+    }
+  
+    ion-title{
+      --color:black;
+    }
+    
+    ion-item-divider {
+      --background: #f9f4ef;
+      --color: #202020;
+    }
+    
+    ion-segment-button {
+      --indicator-color: #5D1B2E;
+    }
+    
+    /* Material Design styles */
+    ion-segment-button.md {
+      --color: #000;
+      --color-checked: #5D1B2E;
+      --indicator-height: 4px;
+      font-weight: bold;
+    }
+
+    
+    /* iOS styles */
+    ion-segment-button.ios {
+      --color: #5D1B2E;
+      --color-checked: #fff;
+      --border-radius: 5px;
+    }
+    
+    .no-results-container {
+      color: #202020;
+    }
+
+    ion-card {
+      border-radius: 5px;
+      background-color: white;
+      --box-shadow: rgba(247, 244, 244, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+      margin-bottom: 10px;
+    }
+    
+    ion-card ion-image {
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
+    }
+    
+    ion-card-subtitle {
+      padding: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 13px;
+      text-transform: capitalize;
+      color: black;
+    }
+    
+    ion-button ion-icon {
+      font-size: 27px;
+      color: #5D1B2E;
+    }
+    
+    ion-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9f4ef;
+    }
+    
+    h4{
+      text-align: justify;
+      color: #202020;
+      margin: 30px;
+    }
+
+    .back-button {
+      --color: #5D1B2E;
+      --background-color: #f9f4ef;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+    
+    h2{
+      text-align: justify;
+      color: #202020;
+      margin: 30px;
+    }
+    h5{
+      text-align: justify;
+      color: #202020;
+      margin: 30px;
+    }
+    h3{
+      font-size: 23px;
+      text-align: center;
+      color: #202020;
+      margin: 10px;
+      margin-bottom: 15px;
+    }
+    h6{
+      text-align: justify;
+      color: #202020;
+      margin: 20px;
+    }
+
+    ion-button#add-button {
+      --background: #5D1B2E;
+      --color: #F1D7D8;
+      font-size: 20px;
+    }
+    
+    ion-button#read-button {
+      --background: #b84866;
+      --color: #F1D7D8;
+      font-size: 20px;
+    }
+    
+    }
+      body.dark {
+
+        * {
+          font-family: 'Poppins', sans-serif;
+        }
+        
+        ion-content {
+          --background: #202020;
+        }
+
+        ion-tab-bar {
+          --background: #202020;
+          --color-selected: #9c1313;
+          --color: #B99798;
+          --border: none;
+        }
+        ion-toolbar {
+          --background: #202020;
+        }
+        ion-searchbar {
+          --background: #770707;
+          --color: #ffffff;
+          --border-radius: 30px;
+        }
+        
+        ion-title{
+          --color:#f9f4ef;
+        }
+        ion-item-divider {
+          --background: #202020;
+          --color: #F1D7D8;
+        }
+        
+        ion-segment-button {
+          --indicator-color: #8B0000;
+        }
+        
+        /* Material Design styles */
+        ion-segment-button.md {
+          --color: #ffffff;
+          --color-checked: #ffebeb;
+          --indicator-height: 4px;
+        }
+        
+        
+        /* iOS styles */
+        ion-segment-button.ios {
+          --color: #8B0000;
+          --color-checked: #fff;
+          --border-radius: 5px;
+        }
+
+        .no-results-container {
+          color: #f9f4ef;
+        }
+
+        ion-card {
+          border-radius: 5px;
+          background-color: #272727;
+          --box-shadow: rgba(153, 153, 153, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+          margin-bottom: 10px;
+        }
+        
+        ion-card ion-image {
+          object-fit: cover;
+          border-radius: 5px 5px 0 0;
+        }
+        
+        ion-card-subtitle {
+          padding: 3px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 13px;
+          text-transform: capitalize;
+          color: #f9f4ef;
+        }
+        
+        ion-button ion-icon {
+          font-size: 27px;
+          color: #b98a8b;
+        }
+        
+        ion-buttons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #202020;
+        }
+        
+        h4{
+          text-align: justify;
+          color: #f9f4ef;
+          margin: 30px;
+        }
+    
+        .back-button {
+          --color: #8B0000;
+          --background-color: #202020;
+          border: none;
+          border-radius: 5px;
+          padding: 5px 10px;
+        }
+
+        h2{
+          text-align: justify;
+          color: #f9f4ef;
+          margin: 30px;
+        }
+        h5{
+          text-align: justify;
+          color: #f9f4ef;
+          margin: 30px;
+        }
+        h3{
+          font-size: 23px;
+          text-align: center;
+          color: #f9f4ef;
+          margin: 10px;
+          margin-bottom: 15px;
+        }
+        h6{
+          text-align: justify;
+          color: #f9f4ef;
+          margin: 20px;
+        }
+    
+        ion-button#add-button {
+          --background: #ad0000;
+          --color: #F1D7D8;
+          font-size: 20px;
+        }
+        
+        ion-button#read-button {
+          --background: #8B0000;
+          --color: #F1D7D8;
+          font-size: 20px;
+        }
+
+
+      }}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="back-button" (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="cdetail">
+    <ion-card-header>
+      <ion-img src="{{card.imageUrl}}" style="object-fit: cover;"></ion-img>
+    </ion-card-header>
+  </ion-card>
+
+  <h3>{{ card.subtitle }}</h3>
+  <div class="button-container">
+    <ion-button id="add-button" (click)="addToLibrary()">Add to Library</ion-button>
+    <ion-button id="read-button" (click)="openFile(card.file)">Read</ion-button>
+  </div>
+  <h6>{{card.content}}</h6>
+  
+</ion-content>

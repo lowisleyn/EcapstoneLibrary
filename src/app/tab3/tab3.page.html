@@ -1,17 +1,25 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Library
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content>
+  <ion-grid>
+    <ion-row class="justify-content-center">
+      <ion-col size="4" *ngFor="let item of library">
+        <ion-card class="ion-margin" (click)="openFile(item.file)">
+          <ion-img src="{{item.imageUrl}}" style="object-fit: cover;"></ion-img>
+          <ion-card-subtitle>{{ item.subtitle }}</ion-card-subtitle>
+          <ion-buttons>
+            <ion-button class="read-button" (click)="openFile(item.file)">
+              <ion-icon name="book"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

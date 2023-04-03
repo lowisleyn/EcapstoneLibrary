@@ -1,17 +1,66 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-slides [options]="slideOpts" (ionSlideTap)="slideTapped($event)">
+    <ion-slide>
+      <img src="https://firebasestorage.googleapis.com/v0/b/ecaps-31ffe.appspot.com/o/ecaps.png?alt=media&token=5afd4268-deac-4988-98d7-b3a2815b331a" onError="handleImageError($event)">
+    </ion-slide>
+    <ion-slide>
+      <img src="https://firebasestorage.googleapis.com/v0/b/ecaps-31ffe.appspot.com/o/stem.png?alt=media&token=9ed1b694-37e8-4ade-ac2e-115152551219" onError="handleImageError($event)">
+    </ion-slide>
+    <ion-slide>
+      <img src="https://firebasestorage.googleapis.com/v0/b/ecaps-31ffe.appspot.com/o/abm.png?alt=media&token=07c16f0c-0848-4b6c-8b37-f9b4d92b6b5e" onError="handleImageError($event)">
+    </ion-slide>
+    <ion-slide>
+      <img src="https://firebasestorage.googleapis.com/v0/b/ecaps-31ffe.appspot.com/o/mobapp.png?alt=media&token=43efa38e-a6f9-4f63-82d2-1a9d7cd9057b" onError="handleImageError($event)">
+    </ion-slide>
+    <ion-slide>
+      <img src="https://firebasestorage.googleapis.com/v0/b/ecaps-31ffe.appspot.com/o/proto.png?alt=media&token=2d3a453d-3a5b-4377-bc7e-c9c6d65da390" onError="handleImageError($event)">
+    </ion-slide>
+    <ion-slide>
+      <img src="https://firebasestorage.googleapis.com/v0/b/ecaps-31ffe.appspot.com/o/web.png?alt=media&token=d6259ddf-b902-4cc7-886b-11edce3b6a39" onError="handleImageError($event)">
+    </ion-slide>
+    <ion-slide *ngIf="!isOnline">
+      <img src="/assets/images/offline.png">
+    </ion-slide>
+  </ion-slides>
+  
+  <ion-segment [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="all">
+      All
+    </ion-segment-button>
+    <ion-segment-button value="stem">
+      STEM
+    </ion-segment-button>
+    <ion-segment-button value="abm">
+      ABM
+    </ion-segment-button>
+  </ion-segment>
+<br>
+  <ion-grid>
+    <ion-row class="justify-content-center">
+      <ion-col size="4" *ngFor="let card of displayedCards">
+        <ion-card class="ion-margin">
+          <ion-img src="{{card.imageUrl}}" style="object-fit: cover;" (click)="openCardDetail(card)"></ion-img>
+          <ion-card-subtitle>{{ card.subtitle }}</ion-card-subtitle>
+          <ion-buttons>
+            <ion-button class="add-button" (click)="addToLibrary(card)">
+              <ion-icon name="add-circle"></ion-icon>
+            </ion-button>
+            <ion-button class="read-button" (click)="openFile(card.file)">
+              <ion-icon name="book"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br>
+  </ion-content>
